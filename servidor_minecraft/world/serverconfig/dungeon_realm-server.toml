@@ -1,0 +1,38 @@
+
+#Dungeon Realm Configs
+[general]
+	#Dungeon map spawn chance multi per dimension
+	DIMENSION_CHANCE_MULTI = ["dungeon_realm:dungeon-1.5"]
+	#Dungeon Maps have a chance to spawn when you loot chests outside of map dimensions
+	#Range: 0.0 ~ 100.0
+	DUNGEON_MAP_SPAWN_CHANCE_ON_CHEST_LOOT = 5.0
+	#Range: 1 ~ 100
+	MIN_MAP_ROOMS = 12
+	#Range: 1 ~ 100
+	MAX_MAP_ROOMS = 20
+	#Range: 0 ~ 20
+	mob_min = 1
+	#Range: 0 ~ 20
+	mob_max = 2
+	#Range: 0 ~ 20
+	pack_mob_min = 3
+	#Range: 0 ~ 20
+	pack_mob_max = 6
+	#Uber fragments can drop from A map boss, default chance is 10%
+	#Range: 0.0 ~ 100.0
+	UBER_FRAG_DROP_RATE = 10.0
+	#How many mobs should an elite mob count for in terms of map completion? Default is 10, so 10x a normal mob death. Max 9999
+	#Range: 1 ~ 9999
+	elite_mob_completion_weight = 10
+	#How many mobs should a miniboss mob count for in terms of map completion? Default is 20, so 20x a normal mob death. Max 9999
+	#Range: 1 ~ 9999
+	mini_boss_completion_weight = 20
+	#Number of data blocks allowed to be potentially miscounted to transition to accurate kill counts. Defaults to 2, between 0-20.
+	#For example, if you have 20 data blocks, and the player has come into range of 18, with a leeway of 2, this means 18 + 2 >= 20, so assume all mobs have been spawned.
+	#This matters *mostly* for the kill completion assumptions. Until all mobs are spawned, it assumes remaining data blocks (command blocks or structure blocks)
+	#will spawn either the MOB_MAX or PACK_MOB_MAX number of mobs. When you cross the threshold + leeway, it assumes all mobs have been spawned, so the
+	#denominator for the calculation shrinks, and kill % goes up. 2 seems to be roughly the right number from testing, but if this proves to be insanely accurate
+	#feel free to crank this back down to 1 or 0.
+	#Range: 0 ~ 20
+	kill_completion_data_block_leeway = 2
+
