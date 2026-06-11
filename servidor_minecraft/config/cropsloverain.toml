@@ -1,0 +1,21 @@
+[general]
+	use_rain_growth_speed = true
+	#cropsloverain.configuration.chance_description
+	rain_growth_speed = 10
+
+[individual]
+	#cropsloverain.configuration.chance_description_individual
+	use_individual_speeds = false
+	bamboo_custom_speed = 10
+	cocoa_custom_speed = 10
+	crops_custom_speed = 10
+	sapling_custom_speed = 10
+	sugar_cane_custom_speed = 10
+	sweet_berry_custom_speed = 10
+	separate_stem_speed = false
+	melon_custom_speed = 10
+	pumpkin_custom_speed = 10
+
+[debug]
+	debug_mode = false
+	halt_regular_growth = false
